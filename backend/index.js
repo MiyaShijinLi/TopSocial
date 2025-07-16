@@ -5,6 +5,12 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const router = require('./routes/index');
+const userProfilesRouter = require('./routes/userProfiles');
+
+app.use(cors());
+
+app.use('/api',router)
 
 
 const PORT = 80;
